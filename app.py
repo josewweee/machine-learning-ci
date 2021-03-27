@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 model_path = 'ML_model/model.pkl'
 
-@app.route('/home', methods=['GET'])
+@app.route('/home2', methods=['GET'])
 def index_page():
     return_data = {
         "error" : "0",

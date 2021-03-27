@@ -1,6 +1,6 @@
 import re
 from nltk.corpus import stopwords
-
+import nltk
 
 def clean_tweets(text):
     remove_links = ' '.join(re.sub(r"http(s)?://((\w+).?){1,}", " ",text).split())
@@ -13,7 +13,7 @@ def clean_tweets(text):
     text = re.sub('[\W]+', ' ', text.lower())+' '.join(emoticons).replace('-', '') #remove non-word character, convert to lower case 
     return text
 
-
+nltk.download('stopwords')
 stop = stopwords.words('english')
 
 def tokenizer(text):
